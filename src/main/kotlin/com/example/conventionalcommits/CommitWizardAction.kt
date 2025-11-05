@@ -29,7 +29,7 @@ class CommitWizardAction : AnAction() {
 
     override fun update(e: AnActionEvent) {
         e.presentation.isEnabledAndVisible = e.getData(VcsDataKeys.COMMIT_MESSAGE_CONTROL) != null
-        e.presentation.icon = IconLoader.getIcon("/META-INF/pluginIcon.svg", javaClass)
+        e.presentation.icon = IconLoader.getIcon("/icons/ccw-nerdwarts-logo-transparent-16", javaClass)
         e.presentation.text = "Conventional Commit Wizard"
     }
 }

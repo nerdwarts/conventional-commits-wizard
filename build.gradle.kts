@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "de.nerdwarts"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -33,6 +33,10 @@ intellijPlatform {
         }
 
         changeNotes = """
+                <h3>1.0.2</h3>
+                <ul>
+                    <li>Reduced the icon file size by half</li>
+                </ul>
                 <h3>1.0.1</h3>
                 <ul>
                     <li>Added custom toolbar icon for Commit Wizard action</li>

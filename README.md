@@ -110,6 +110,6 @@ on [GitHub](https://github.com/nerdwarts/conventional-commits-wizard/issues).
 - [Gitmoji Guide](https://gitmoji.dev/specification)
 - [IntelliJ Platform SDK](https://plugins.jetbrains.com/docs/intellij/welcome.html?from=jetbrains.org)
 
-<hr></hr>
+<hr />
 
 Made with ❤️ by [nerdwarts](https://nerdwarts.com) 
