@@ -6,7 +6,7 @@
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
     <name>Conventional Commits Wizard</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="nerdwarts@kt-z.de" url="https://www.nerdwarts.de">Nerdwarts</vendor>
@@ -49,7 +49,7 @@
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
-    <depends>com.intellij.modules.all</depends>
+    <depends>com.intellij.modules.vcs</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
@@ -61,7 +61,8 @@
         <action id="ConventionalCommit.Wizard"
                 class="com.example.conventionalcommits.CommitWizardAction"
                 text="Conventional Commit Wizard"
-                description="Create a conventional commit message">
+                description="Create a conventional commit message"
+                icon="/icons/ccw-icon-16.svg">
             <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
         </action>
     </actions>

@@ -1,3 +1,5 @@
+[[src/main/resources/static/images/ccw-nerdwarts-logo-banner.svg]]
+
 # 🧙‍♂️ Conventional Commits Wizard
 
 A powerful IntelliJ IDEA plugin that helps you write better commit messages using Conventional Commits and Gitmoji

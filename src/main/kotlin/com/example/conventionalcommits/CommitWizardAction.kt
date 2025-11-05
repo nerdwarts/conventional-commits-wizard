@@ -3,6 +3,7 @@ package com.example.conventionalcommits
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.ui.DialogWrapper
+import com.intellij.openapi.util.IconLoader
 import com.intellij.openapi.vcs.CommitMessageI
 import com.intellij.openapi.vcs.VcsDataKeys
 import com.intellij.ui.dsl.builder.columns
@@ -28,6 +29,8 @@ class CommitWizardAction : AnAction() {
 
     override fun update(e: AnActionEvent) {
         e.presentation.isEnabledAndVisible = e.getData(VcsDataKeys.COMMIT_MESSAGE_CONTROL) != null
+        e.presentation.icon = IconLoader.getIcon("/META-INF/pluginIcon.svg", javaClass)
+        e.presentation.text = "Conventional Commit Wizard"
     }
 }
 

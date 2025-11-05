@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "de.nerdwarts"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -29,16 +29,38 @@ dependencies {
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "251"
+            sinceBuild = "231"
         }
 
         changeNotes = """
-            Initial version
+                <h3>1.0.1</h3>
+                <ul>
+                    <li>Added custom toolbar icon for Commit Wizard action</li>
+                    <li>Improved plugin compatibility across JetBrains IDEs (IntelliJ IDEA, PyCharm, GoLand, RustRover)</li>
+                    <li>Fixed icon display issue in VCS toolbar</li>
+                </ul>
+                
+                <h3>1.0.0</h3>
+                <ul>
+                    <li>Initial release</li>
+                    <li>Interactive wizard for creating conventional commit messages</li>
+                    <li>Support for standard commit types (feat, fix, docs, style, refactor, test, chore)</li>
+                    <li>Optional scope and breaking change indicators</li>
+                    <li>Emoji support with configurable toggle</li>
+                    <li>Integration with VCS commit dialog</li>
+                </ul>
         """.trimIndent()
     }
 }
 
 tasks {
+    buildSearchableOptions {
+        enabled = false
+    }
+
+    patchPluginXml {
+        sinceBuild.set("231")
+    }
     // Set the JVM compatibility versions
     withType<JavaCompile> {
         sourceCompatibility = "21"
