@@ -4,8 +4,8 @@ plugins {
     id("org.jetbrains.intellij.platform") version "2.7.1"
 }
 
-group = "com.example"
-version = "1.0-SNAPSHOT"
+group = "de.nerdwarts"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -50,4 +50,5 @@ kotlin {
     compilerOptions {
         jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
     }
+    jvmToolchain(21)
 }

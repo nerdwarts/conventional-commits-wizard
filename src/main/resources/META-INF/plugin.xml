@@ -6,9 +6,10 @@
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
     <name>Conventional Commits Wizard</name>
+    <version>1.0.0</version>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor url="https://www.nerdwarts.de">Nerdwarts</vendor>
+    <vendor email="nerdwarts@kt-z.de" url="https://www.nerdwarts.de">Nerdwarts</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
@@ -43,6 +44,7 @@
         <p>
             Perfect for teams and individuals who want to maintain consistent, meaningful commit history.
         </p>
+
     ]]></description>
 
     <!-- Product and plugin compatibility requirements.
