@@ -1,29 +1,66 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.example.conventionalcommits</id>
+    <id>de.nerdwarts.conventionalcommits</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-name -->
-    <name>Conventionalcommits</name>
+    <name>Conventional Commits Wizard</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor url="https://www.yourcompany.com">Nerdwarts</vendor>
+    <vendor url="https://www.nerdwarts.de">Nerdwarts</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/best-practices-for-listing.html#plugin-description -->
     <description><![CDATA[
-        Enter short description for your plugin here.<br>
-        <em>most HTML tags may be used</em>
+        <h2>Conventional Commits Wizard</h2>
+        <p>
+            A powerful IntelliJ IDEA plugin that helps you write standardized commit messages following the
+            <a href="https://www.conventionalcommits.org/">Conventional Commits</a> specification with
+            <a href="https://gitmoji.dev/">Gitmoji</a> support.
+        </p>
+
+        <h3>Features</h3>
+        <ul>
+            <li><strong>Interactive Wizard:</strong> Step-by-step guidance for creating well-structured commit messages</li>
+            <li><strong>Gitmoji Integration:</strong> Choose from 70+ emojis to visually represent your changes</li>
+            <li><strong>Smart Defaults:</strong> Automatically suggests appropriate emojis based on commit type</li>
+            <li><strong>Complete Conventional Commits Support:</strong> Includes type, scope, description, body, footer, and breaking changes</li>
+            <li><strong>Organized Categories:</strong> Emojis grouped thematically for easy discovery</li>
+            <li><strong>VCS Integration:</strong> Seamlessly integrates with IntelliJ's commit dialog</li>
+        </ul>
+
+        <h3>Usage</h3>
+        <p>
+            Access the wizard from the VCS commit dialog by clicking the "Conventional Commit Wizard" action.
+            Select your commit type, choose an emoji, add a scope (optional), write your description, and the
+            plugin will generate a properly formatted commit message.
+        </p>
+
+        <h3>Example Output</h3>
+        <code>feat(auth): ✨ add OAuth2 authentication</code>
+
+        <p>
+            Perfect for teams and individuals who want to maintain consistent, meaningful commit history.
+        </p>
     ]]></description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
-    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.all</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
+
+    <actions>
+        <action id="ConventionalCommit.Wizard"
+                class="com.example.conventionalcommits.CommitWizardAction"
+                text="Conventional Commit Wizard"
+                description="Create a conventional commit message">
+            <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
